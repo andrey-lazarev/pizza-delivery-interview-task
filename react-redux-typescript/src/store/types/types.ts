@@ -15,7 +15,7 @@ export type TMenuMockUp = {
   description: string
 }[];
 
-export type TStrId = string;
+export type TId = string;
 
 export enum ECurrency {
   dollar = 'dollar',
