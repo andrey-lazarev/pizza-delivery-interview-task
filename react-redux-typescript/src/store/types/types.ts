@@ -1,5 +1,5 @@
 import { ThunkDispatch } from 'redux-thunk';
-import { Action } from "redux";
+import { Action } from 'redux';
 
 export type TGetState = () => IAppState;
 
@@ -16,8 +16,8 @@ export type TMenuMockUp = {
 }[]
 
 export enum ECurrency {
-    dollar = 'dollar',
-    euro = 'euro',
+  dollar = 'dollar',
+  euro = 'euro',
 }
 
 export interface IUser {
