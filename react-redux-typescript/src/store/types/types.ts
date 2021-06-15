@@ -9,8 +9,8 @@ export type ThunkAction = (
 ) => void;
 
 export enum ECurrency {
-    dollar,
-    euro,
+    'dollar',
+    'euro',
 }
 
 export interface IUser {
