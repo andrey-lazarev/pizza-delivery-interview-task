@@ -3,7 +3,7 @@ import { Action } from 'redux';
 
 export type TGetState = () => IAppState;
 
-export type Dispatch = ThunkDispatch<unknown, unknown, Action>
+export type Dispatch = ThunkDispatch<unknown, unknown, Action>;
 
 export type ThunkAction = (
   dispatch: Dispatch,
@@ -13,7 +13,9 @@ export type ThunkAction = (
 export type TMenuMockUp = {
   name: string,
   description: string
-}[]
+}[];
+
+export type TStrId = string;
 
 export enum ECurrency {
   dollar = 'dollar',
@@ -36,7 +38,6 @@ export interface IModal {
 }
 
 export interface IAppState {
-  currency: ECurrency;
   user: IUser;
   menu: IMenu;
   cart?: ICart;
