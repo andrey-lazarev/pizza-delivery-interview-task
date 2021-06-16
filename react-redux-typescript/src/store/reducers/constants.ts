@@ -1,8 +1,8 @@
 import { getTempUser } from '../helpers/getTempUser';
 import { getMenuMockUp } from '../helpers/getMenuMockUp';
-import { ECurrency, IAppState, TMenuMockUp } from '../types/types';
+import { AppState, MenuMockUp } from '../types/types';
 
-const menuMockUpData: TMenuMockUp = [
+const menuMockUpData: MenuMockUp = [
   {
     name: 'Quarto Formaggio',
     description: 'Tomato sauce, Mozzarella cheese, Cheddar cheese, Blue cheese, Parmesan cheese',
@@ -45,12 +45,10 @@ const menuMockUpData: TMenuMockUp = [
   },
 ];
 
-export const getInitialState = (): IAppState => ({
+export const getInitialState = (): AppState => ({
   menu: getMenuMockUp(menuMockUpData),
-  currency: ECurrency.dollar,
+  currency: 'dollar',
   user: getTempUser(),
-  modal: {
-  },
-  cart: {
-  }
+  modal: {},
+  cart: {}
 });

@@ -1,4 +1,4 @@
-export const genIntInRange = (
+export const getRandIntInRange = (
   min: number,
   max: number,
 ): number => (

@@ -1,6 +1,6 @@
 import { v4 as uuid } from 'uuid';
-import { IUser } from '../types/types';
+import { User } from '../types/types';
 
-export const getTempUser = (): IUser => ({
+export const getTempUser = (): User => ({
   [uuid()]: {}
 })

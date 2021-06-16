@@ -1,46 +1,45 @@
 import { ThunkDispatch } from 'redux-thunk';
 import { Action } from 'redux';
 
-export type TGetState = () => IAppState;
+export type GetState = () => AppState;
 
 export type Dispatch = ThunkDispatch<unknown, unknown, Action>;
 
 export type ThunkAction = (
   dispatch: Dispatch,
-  getState: TGetState
+  getState: GetState
 ) => void;
 
-export type TMenuMockUp = {
+export type MenuMockUp = {
   name: string,
   description: string
 }[];
 
-export type TId = string;
+export type UUID = string;
 
-export enum ECurrency {
-  dollar = 'dollar',
-  euro = 'euro',
+export type Currency = 'dollar' | 'euro'
+
+export interface User {
 }
 
-export interface IUser {
+export interface Menu {
 }
 
-export interface IMenu {
+export interface Cart {
 }
 
-export interface ICart {
+export interface Order {
 }
 
-export interface IOrder {
+export interface Modal {
 }
 
-export interface IModal {
+export interface AppState {
+  currency: Currency;
+  user: User;
+  menu: Menu;
+  cart?: Cart;
+  order?: Order;
+  modal?: Modal;
 }
 
-export interface IAppState {
-  user: IUser;
-  menu: IMenu;
-  cart?: ICart;
-  order?: IOrder;
-  modal?: IModal;
-}

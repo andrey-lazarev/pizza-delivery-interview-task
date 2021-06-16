@@ -6,16 +6,16 @@ import {
   SET_USER,
   TOGGLE_CURRENCY,
 } from './constants';
-import { IOrder, IUser, TId } from '../types/types';
+import { Order, User, UUID } from '../types/types';
 
 export interface IAddToCartAction {
   type: typeof ADD_ITEM_TO_CART;
-  id: TId;
+  id: UUID;
 }
 
 export interface IRemoveFromCartAction {
   type: typeof REMOVE_ITEM_FROM_CART;
-  id: TId;
+  id: UUID;
 }
 
 export interface IToggleCurrencyAction {
@@ -29,12 +29,12 @@ export interface ISetModalIsOpenAction {
 
 export interface ISetOrderAction {
   type: typeof SET_ORDER;
-  order: IOrder;
+  order: Order;
 }
 
 export interface ISetUserAction {
   type: typeof SET_USER;
-  user: IUser;
+  user: User;
 }
 
 export type TAppAction = (

@@ -1,15 +1,15 @@
 import { v4 as uuid } from 'uuid';
-import { IMenu, TMenuMockUp } from '../types/types';
+import { Menu, MenuMockUp } from '../types/types';
 import { getImageUrlByName } from './getImageUrlByName';
-import { genIntInRange } from './getIntInRange';
+import { getRandIntInRange } from './getIntInRange';
 
 export const getMenuMockUp = (
-  menuData: TMenuMockUp,
-): IMenu => ({
+  menuData: MenuMockUp,
+): Menu => ({
   ...menuData.map((item) => ({
     [uuid()]: {
       ...item,
-      price: genIntInRange(10, 50),
+      price: getRandIntInRange(10, 50),
       imageUrl: getImageUrlByName(item.name)
     }
   }))
