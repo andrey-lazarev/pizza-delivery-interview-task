@@ -1,10 +1,10 @@
 import {
   ADD_ITEM_TO_CART,
   REMOVE_ITEM_FROM_CART,
-  TOGGLE_MODAL_IS_OPEN,
   SET_ORDER,
   SET_USER,
   TOGGLE_CURRENCY,
+  TOGGLE_MODAL,
 } from './constants';
 import { Order, User, UUID } from '../types/types';
 
@@ -22,9 +22,8 @@ export interface ToggleCurrency {
   type: typeof TOGGLE_CURRENCY;
 }
 
-export interface ToggleModalIsOpen {
-  type: typeof TOGGLE_MODAL_IS_OPEN;
-  isOpen: boolean;
+export interface ToggleModal {
+  type: typeof TOGGLE_MODAL;
 }
 
 export interface SetOrder {
@@ -41,7 +40,7 @@ export type AppAction = (
   AddItemToCart |
   RemoveItemFromCart |
   ToggleCurrency |
-  ToggleModalIsOpen |
+  ToggleModal |
   SetOrder |
   SetUser
   )
