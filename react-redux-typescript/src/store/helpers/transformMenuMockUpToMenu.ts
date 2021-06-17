@@ -3,14 +3,14 @@ import { Menu, MenuMockUp } from '../types/types';
 import { getImageUrlByName } from './getImageUrlByName';
 import { getRandIntInRange } from './getIntInRange';
 
-export const getMenuMockUp = (
-  menuData: MenuMockUp,
+export const transformMenuMockUpToMenu = (
+  menuMockUp: MenuMockUp,
 ): Menu => ({
-  ...menuData.map((item) => ({
+  ...menuMockUp.map((item) => ({
     [uuid()]: {
       ...item,
       price: getRandIntInRange(10, 50),
-      imageUrl: getImageUrlByName(item.name)
+      imageURL: getImageUrlByName(item.name)
     }
   }))
 });
