@@ -1,5 +1,5 @@
 import { getTempUser } from '../helpers/getTempUser';
-import { getMenuMockUp } from '../helpers/getMenuMockUp';
+import { transformMenuMockUpToMenu } from '../helpers/transformMenuMockUpToMenu';
 import { AppState, MenuMockUp } from '../types/types';
 
 const menuMockUpData: MenuMockUp = [
@@ -46,9 +46,7 @@ const menuMockUpData: MenuMockUp = [
 ];
 
 export const getInitialState = (): AppState => ({
-  menu: getMenuMockUp(menuMockUpData),
+  menu: transformMenuMockUpToMenu(menuMockUpData),
   currency: 'dollar',
   user: getTempUser(),
-  modal: {},
-  cart: {}
 });
