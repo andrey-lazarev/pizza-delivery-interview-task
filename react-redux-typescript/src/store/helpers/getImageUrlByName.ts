@@ -1,5 +1,5 @@
 export const getImageUrlByName = (
-  name: string,
+  name: string
 ): string => (
   'images/' + name.toLowerCase().split(' ').join('-') + '.png'
 );

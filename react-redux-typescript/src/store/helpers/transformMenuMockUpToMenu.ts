@@ -9,7 +9,7 @@ export const transformMenuMockUpToMenu = (
   ...menuMockUp.map((item) => ({
     [uuid()]: {
       ...item,
-      price: getRandIntInRange(10, 50),
+      price: getRandIntInRange(),
       imageURL: getImageUrlByName(item.name)
     }
   }))

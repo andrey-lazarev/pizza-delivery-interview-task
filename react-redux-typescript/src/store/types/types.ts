@@ -22,7 +22,7 @@ export type BaseEntity<O extends object> = {
 }
 
 export type User = BaseEntity<{
-  name: string;
+  name?: string;
   pass?: string;
   address?: string;
   ordersHistory?: Order[];

@@ -3,4 +3,4 @@ import { User } from '../types/types';
 
 export const getTempUser = (): User => ({
   [uuid()]: {}
-})
+});
