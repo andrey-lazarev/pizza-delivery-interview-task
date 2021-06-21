@@ -12,8 +12,7 @@ const mapStateToProps = (
 };
 
 export const RootHOC = connect(
-  mapStateToProps,
-  null
+  mapStateToProps
 )(RootComponent);
 
 RootHOC.displayName = 'RootHOC';

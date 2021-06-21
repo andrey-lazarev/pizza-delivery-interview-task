@@ -1,13 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { applyMiddleware, createStore, Store } from 'redux';
+import { AppAction } from './store/actions/types';
+import { AppState, Dispatch } from './store/types/types';
+import { appReducer } from './store/reducers/appReducer';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import thunk from 'redux-thunk';
+import { Provider } from 'react-redux';
+import { RootHOC } from './hocs/RootHOC/RootHOC';
+
+const store: Store<AppState, AppAction> & {
+  dispatch: Dispatch
+} = createStore(
+  appReducer,
+  composeWithDevTools(applyMiddleware(thunk)),
+);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={ store }>
+    <React.StrictMode>
+      <RootHOC/>
+    </React.StrictMode>
+  </Provider>,
   document.getElementById('root')
 );
 

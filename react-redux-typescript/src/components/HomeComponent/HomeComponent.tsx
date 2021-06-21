@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import { appendClassNameModifier } from '../../helpers/helpers';
 
-export function HomeComponent () {
+export function HomeComponent() {
   const homeClassName = 'home';
   const homeTitleClassName = homeClassName + '__title';
   const homeTextClassName = homeClassName + '__text';
@@ -16,7 +16,7 @@ export function HomeComponent () {
 				Hello!
 			</span>
       <span className={ homeTextClassName }>
-				This is a live version of Pizza Delivery App interview task.
+				This is a live version of Pizza Delivery interview task.
 			</span>
       <span className={ homeTextClassName }>
 				You can checkout the
@@ -33,10 +33,10 @@ export function HomeComponent () {
 				OR
 			</span>
       <Link
-        to='/menu'
+        to="/menu"
         className={ homeLinkClassName }
       >
-        Go straight to the menu
+        Go to the menu
       </Link>
     </div>
   );
