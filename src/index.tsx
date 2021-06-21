@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import reportWebVitals from './reportWebVitals';
 import { applyMiddleware, createStore, Store } from 'redux';
-import { AppAction } from './store/actions/types';
-import { AppState, Dispatch } from './store/types/types';
-import { appReducer } from './store/reducers/appReducer';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import thunk from 'redux-thunk';
+import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
+import { AppState, Dispatch } from './store/types/types';
+import { AppAction } from './store/actions/types';
+import thunk from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import { appReducer } from './store/reducers/appReducer';
 import { RootHOC } from './hocs/RootHOC/RootHOC';
 
 const store: Store<AppState, AppAction> & {
@@ -20,11 +20,9 @@ const store: Store<AppState, AppAction> & {
 
 ReactDOM.render(
   <Provider store={ store }>
-    <React.StrictMode>
-      <RootHOC/>
-    </React.StrictMode>
+    <RootHOC/>
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 // If you want to start measuring performance in your app, pass a function
