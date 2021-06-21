@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom';
 import { appendClassNameModifier, combineClassNames } from '../../helpers/helpers';
-import './RootComponent.scss';
 import { RootComponentProps } from './types';
 import { HomeComponent } from '../HomeComponent/HomeComponent';
 
