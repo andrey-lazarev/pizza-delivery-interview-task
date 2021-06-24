@@ -1,6 +1,6 @@
 import {
-  ADD_ITEM_TO_CART,
-  REMOVE_ITEM_FROM_CART,
+  ADD_MENU_ITEM_TO_CART,
+  REMOVE_MENU_ITEM_FROM_CART,
   SET_ORDER,
   SET_USER,
   TOGGLE_CURRENCY,
@@ -8,13 +8,13 @@ import {
 } from './constants';
 import { Order, User, UUID } from '../types/types';
 
-export interface AddItemToCart {
-  type: typeof ADD_ITEM_TO_CART;
+export interface AddMenuItemToCart {
+  type: typeof ADD_MENU_ITEM_TO_CART;
   id: UUID;
 }
 
-export interface RemoveItemFromCart {
-  type: typeof REMOVE_ITEM_FROM_CART;
+export interface RemoveMenuItemFromCart {
+  type: typeof REMOVE_MENU_ITEM_FROM_CART;
   id: UUID;
 }
 
@@ -37,8 +37,8 @@ export interface SetUser {
 }
 
 export type AppAction = (
-  AddItemToCart |
-  RemoveItemFromCart |
+  AddMenuItemToCart |
+  RemoveMenuItemFromCart |
   ToggleCurrency |
   ToggleModal |
   SetOrder |
